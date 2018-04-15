@@ -1,0 +1,24 @@
+#!/bin/bash -l
+# Queue to use
+#PBS -q default
+# NAME of job
+#PBS -N yelp
+# Account resources to use
+#PBS -A DBIC
+# Resources to reserve
+#PBS -l nodes=1:ppn=30
+#PBS -l walltime=24:00:00
+# Send email to this address
+#PBS -M sam.19@dartmouth.edu
+# When to send defined here
+#PBS -m bea
+# Output
+#PBS -j oe
+
+# Change to job working directory
+cd $PBS_O_WORKDIR
+source activate py35
+##############################
+# Enter your code to run below
+##############################
+python starterv2b.py
